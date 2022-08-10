@@ -21,4 +21,8 @@ class Region extends Model
     public function countries(){
         return $this->hasMany(Country::class , 'region_id');
     }
+
+    public function continent(){
+        return $this->Belongsto(continent::class, 'continent_id');
+    }
 }
